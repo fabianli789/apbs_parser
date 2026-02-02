@@ -1,0 +1,36 @@
+diff a/pyproject.toml b/pyproject.toml	(rejected hunks)
+@@ -26,16 +25,31 @@ maintainers = [
+ ]
+ license = { file = "LICENSE" }
+ dependencies = [
+-    "nomad-lab>=1.3.0",
+-    "python-magic-bin; sys_platform == 'win32'",
++    "nomad-lab>=1.4.0",
++    "pydantic",
++    "temporalio",
+ ]
+ 
+ [project.urls]
+ Repository = "https://github.com/fabianli789/apbs_parser"
+ 
+ [project.optional-dependencies]
+-dev = ["ruff", "pytest", "structlog"]
++dev = [
++    "ruff",
++    "pytest",
++    "structlog",
++    "mkdocs",
++    "mkdocs-material==8.1.1",
++    "pymdown-extensions",
++    "mkdocs-click",
++    "pytest-asyncio",
++]
+ 
++[tool.uv]
++extra-index-url = [
++  "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple",
++]
++    
+ [tool.ruff]
+ # Exclude a variety of commonly ignored directories.
+ exclude = [
