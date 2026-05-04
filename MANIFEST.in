@@ -1,2 +1,1 @@
-recursive-include * nomad_plugin.yaml
 graft src/apbs_parser/example_uploads
